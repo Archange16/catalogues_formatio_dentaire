@@ -541,7 +541,7 @@ p {
   font-size: 15px;
   transition: 0.2s;
 }
-.btn-one:hover,
+/* .btn-one:hover, */
 .btn-two:hover,
 .btn-two1:hover,
 .btn-three:hover,
@@ -552,7 +552,6 @@ p {
 .btn-eight:hover,
 .btn-nine:hover {
   background-color: var(--text-white);
-  
   box-shadow: 0px 6px 25px rgba(174, 211, 195, 0.9);
   transform: translateY(-2px);
 }
@@ -591,6 +590,10 @@ p {
   color: var(--text-white);
   text-transform: none;
   margin-right: 10px;
+}
+.btn-one:hover{
+  background-color: transparent;
+  color: var(--text-white);
 }
 .btn-two:hover {
   background-color: transparent;
@@ -1187,7 +1190,7 @@ p {
   --black: #000000;
   --primary-color-1: #000d44;
   --primary-color-2: #FF6F3C  ;
-  --primary-color-3: #04ce78;
+  --primary-color-3: #00d1db;
   --bg-heading-color: #000d44;
   --text-heading-color: #1f0a3b;
   --btn-heading-color: #131313;
@@ -4671,9 +4674,11 @@ Responsive Menu Css
 ==========================================================================*/
 .page__banner {
   /* background-color: #00000057; */
-  background:var(--color-5) url(../img/video/imageFond.png) no-repeat center center;
+  background:var(--color-5) url(../img/video/imageFond.png) no-repeat center bottom;
   position: relative;
   overflow: hidden;
+  height: 500px;
+  padding-top: 200px;
 }
 .page__banner-shape {
   position: absolute;
@@ -6057,10 +6062,34 @@ Responsive Menu Css
   color: var(--color-3);
 }
 .services__two-single-service:hover .services__two-single-service-content a {
-  color: var(--primary-color-3);
+  color: var(--text-white);
 }
 .services__two-single-service:hover .services__two-single-service-content a i {
   color: var(--primary-color-3);
+}
+
+.services__two-single-service-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.services__two-single-service-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 13, 68, 0.5); /* couleur et opacité de la superposition */
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.services__two-single-service-image:hover::before {
+  opacity: 0;
+  visibility: visible;
 }
 
 @media (max-width: 1399px) {
@@ -8101,10 +8130,10 @@ Responsive Menu Css
 .pricing-plan__two-single-pricing-plan .btn-one:hover {
   background: var(--primary-color-2);
   border-color: var(--primary-color-2);
-  color: var(--text-heading-color);
+  color: var(--bg-heading-color);
 }
 .pricing-plan__two-single-pricing-plan .btn-one:hover i {
-  color: var(--text-heading-color);
+  color: var(--bg-heading-color);
 }
 
 /*==========================================================================
@@ -8490,7 +8519,7 @@ Responsive Menu Css
 }
 .work-process__four .btn-one:hover {
   background-color: var(--bg-white);
-  color: var(--text-heading-color);
+  color: var(--bg-heading-color);
 }
 .work-process__four .btn-one:hover i {
   color: var(--text-heading-color);
