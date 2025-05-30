@@ -60,13 +60,10 @@ const FooterThree = () => {
                         <div className="footer__three-widget border-one">
                             <div className="footer__three-widget-solution">
                                 <ul>
-									<li><Link href="https://formations-dentaire.fr">Accueil</Link></li>
-									<li><Link href="https://formations-dentaire.fr/#Solutions">Solutions</Link></li>
-									<li><Link href="https://formations-dentaire.fr/#formation">Formation</Link></li>
-									<li><Link href="/categories">Categories</Link></li>
-									<li><Link href="https://formations-dentaire.fr/#Temoignage">Témoignage</Link></li>
-									<li><Link href="testimonial"></Link></li>
-									<li><Link href="https://formations-dentaire.fr/#Contact">Contact</Link></li>
+									<li><Link href="/">Accueil</Link></li>
+									<li><Link href="https://formations-dentaire.fr/#Solutions">⁠Formation Dentaire</Link></li>
+									<li><Link href="/categories/Entrepreneur">⁠Création Entreprise</Link></li>
+									<li><Link href="/">Contact</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -80,7 +77,7 @@ const FooterThree = () => {
                         <div className="col-xl-5 col-lg-6"> 
                             <div className="copyright__one-left">
                                 <p>Copyright © Kevin 
-                                    <Link href="https://formations-dentaire.fr" target="_blank">Kelaj Formation Dentaire.</Link>All Rights Reserved</p>
+                                    <Link href="/" target="_blank">Kelaj Formation </Link>All Rights Reserved</p>
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-6">

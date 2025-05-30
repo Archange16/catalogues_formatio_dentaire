@@ -13,7 +13,7 @@ const CategoriesPage = () => {
         <>
             <SEO pageTitle="Nos catégories de programmes de formation" />
             <HeaderOne />
-            <BreadCrumb title="Nos catégories de programmes" innerTitle="Nos catégories de programmes de formation" />
+            <BreadCrumb title="Notre Catalogue" innerTitle="Nos catégories de programmes de formation" />
             <CategoriesMain />
             <WorkArea />
             <Testimonial />

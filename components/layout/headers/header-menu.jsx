@@ -16,22 +16,16 @@ const MainMenu = () => {
         <>
             <ul>
                 <li className="menu-item-has-children">
-                    <Link href="https://formations-dentaire.fr" onClick={() => handleMenuClick('Accueil')}>Accueil</Link>
+                    <Link href="/" onClick={() => handleMenuClick('Accueil')}>Accueil</Link>
                 </li>
                 <li className="menu-item-has-children">
-                    <Link href="https://formations-dentaire.fr/#Solutions" onClick={() => handleMenuClick('À propos')}>Solutions</Link>
+                    <Link href="https://formations-dentaire.fr" onClick={() => handleMenuClick('À propos')}>⁠Formation Dentaire</Link>
                 </li>
                 <li className="menu-item-has-children">
-                    <Link href="https://formations-dentaire.fr/#formation" onClick={() => handleMenuClick('Formations')}>Formation</Link>
+                    <Link href="/categories/Entrepreneur" onClick={() => handleMenuClick('Formations')}>Création Entreprise</Link>
                 </li>
                 <li className="menu-item-has-children">
-                    <Link href="/categories" onClick={() => handleMenuClick('Formations')}>Categories</Link>
-                </li>
-                <li className="menu-item-has-children">
-                    <Link href="https://formations-dentaire.fr/#Temoignage" onClick={() => handleMenuClick('Blog')}>Témoignage</Link>
-                </li>
-                <li className="menu-item-has-children">
-                    <Link href="https://formations-dentaire.fr/#Contact" onClick={() => handleMenuClick('Blog')}>Contact</Link>
+                    <Link href="/Contact" onClick={() => handleMenuClick('Blog')}>Contact</Link>
                 </li>
             </ul>
         </>
