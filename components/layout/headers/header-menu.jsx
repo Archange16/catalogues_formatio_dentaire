@@ -24,9 +24,6 @@ const MainMenu = () => {
                 <li className="menu-item-has-children">
                     <Link href="/categories/Entrepreneur" onClick={() => handleMenuClick('Formations')}>Création Entreprise</Link>
                 </li>
-                <li className="menu-item-has-children">
-                    <Link href="/Contact" onClick={() => handleMenuClick('Blog')}>Contact</Link>
-                </li>
             </ul>
         </>
     );

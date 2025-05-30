@@ -52,7 +52,7 @@ const CategoriesMain = () => {
                                     </div>
                                     <div className="services__two-single-service-content formation-solution">
                                         <h4>FORMATION DENTAIRE</h4> 
-                                        <Link href={`/categories/Entrepreneur`} className="btn-one mb-20 ml-20">
+                                        <Link href={`https://formations-dentaire.fr`} className="btn-one mb-20 ml-20">
                                             Voir les formations
                                         </Link>
                                     </div>

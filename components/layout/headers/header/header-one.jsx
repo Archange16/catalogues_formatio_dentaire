@@ -81,7 +81,7 @@ const HeaderOne = ({variant}) => {
                                     </div>
                                 </div> */}
                                 <div className="header__area-menubar-right-box-btn">
-                                    <button className="btn-one" ><Link href='https://formations-dentaire.fr/product/formation-qualite-cabinet-dentaire/'>Je m'inscris maintenant !</Link><i className="fas fa-arrow-right"></i></button>
+                                    <button className="btn-one" onClick={() => setSidebarOpen(true)}>Contacter nous<i className="fas fa-arrow-right"></i></button>
                                 </div>
                                 <div className="header__area-menubar-right-box-btn1">
                                     <i className=""  target="_blank"  onClick={handleContactClick}><img src={formulaire.src} alt="logo"/></i>
@@ -98,6 +98,7 @@ const HeaderOne = ({variant}) => {
             <SideBarContact isOpen={sidebarOpen1} setIsOpen={setSidebarOpen1} />
             <MobileMenuPopup isOpen={menuSidebar} setIsOpen={setMenuSidebar} popupLogo={logo2} />
             <Search isOpen={search} setIsOpen={setSearch} />
+             <SideBarContact isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
         </>
     );
 };

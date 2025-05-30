@@ -76,8 +76,8 @@ const FooterThree = () => {
                     <div className="row justify-content-between copyright__one-container-area">
                         <div className="col-xl-5 col-lg-6"> 
                             <div className="copyright__one-left">
-                                <p>Copyright © Kevin 
-                                    <Link href="/" target="_blank">Kelaj Formation </Link>All Rights Reserved</p>
+                                <p>Copyright ©  
+                                    <Link href="/" target="_blank"> Kelaj Formation </Link></p>
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-6">
