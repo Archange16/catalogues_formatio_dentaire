@@ -2,8 +2,10 @@ import Link from "next/link";
 import logo from "../../../public/assets/img/logo-2.png";
 import Social from "@/components/data/social";
 import { useState } from 'react';
+import SideBarContact from "../headers/offcanvas_cont";
 
 const FooterThree = () => {
+    const [sidebarOpen, setSidebarOpen] = useState(false);
     const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState('');
@@ -63,7 +65,7 @@ const FooterThree = () => {
 									<li><Link href="/">Accueil</Link></li>
 									<li><Link href="https://formations-dentaire.fr/#Solutions">⁠Formation Dentaire</Link></li>
 									<li><Link href="/categories/Entrepreneur">⁠Création Entreprise</Link></li>
-									<li><Link href="/">Contact</Link></li>
+									<li onClick={() => setSidebarOpen(true)}><Link href="">Contact</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -82,14 +84,15 @@ const FooterThree = () => {
                         </div>
                         <div className="col-xl-5 col-lg-6">
                             <div className="copyright__one-right">
-                                <Link href="https://meet.brevo.com/kevin-a2ta2l/presentation" target="_blank">POLITIQUE DE COOKIES</Link> |
-                                 <Link href="https://meet.brevo.com/kevin-a2ta2l/presentation" target="_blank"> Conditions générales de vente</Link>
+                                <Link href="/cookiepolicy" target="_blank">POLITIQUE DE COOKIES</Link> |
+                                 <Link href="/cgv" target="_blank"> Conditions générales de vente</Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <SideBarContact isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
         </>
     );
 };
