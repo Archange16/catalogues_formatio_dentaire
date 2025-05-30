@@ -541,7 +541,7 @@ p {
   font-size: 15px;
   transition: 0.2s;
 }
-/* .btn-one:hover, */
+.btn-one:hover,
 .btn-two:hover,
 .btn-two1:hover,
 .btn-three:hover,
@@ -553,7 +553,7 @@ p {
 .btn-nine:hover {
   background-color: var(--text-white);
   box-shadow: 0px 6px 25px rgba(174, 211, 195, 0.9);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 .btn-one:hover i,
 .btn-two:hover i,
