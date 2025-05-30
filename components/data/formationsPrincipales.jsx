@@ -11,7 +11,7 @@ import siteWebDebutant from "../../public/assets/img/v1/11 SITE WEB DEBUTANT.png
 import django from "../../public/assets/img/v1/12 - django.png";
 import python from "../../public/assets/img/v1/13 - python.png";
 import risquesNaturels from "../../public/assets/img/v1/14 - risques naturels.jpg";
-import fiscalite from "../../public/assets/img/v1/15 - Fiscalité.jpg";
+/* import fiscalite from "../../public/assets/img/v1/15 - Fiscalité.jpg"; */
 import francais from "../../public/assets/img/v1/16 - francais.png";
 import gestionTemps from "../../public/assets/img/v1/17 - Gestion Temps.png";
 import stress from "../../public/assets/img/v1/18 - stress.jpg";

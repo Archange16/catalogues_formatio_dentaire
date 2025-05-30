@@ -13,13 +13,6 @@ export default function RootLayout({ children }) {
         }
     }, []);
 
-    useEffect(() => {
-        // Ajouter un contrôle de validation de l'ID du pixel Facebook
-        if (!process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID) {
-            console.error('Pixel ID de Facebook manquant ! Assurez-vous qu\'il est correctement défini dans .env.local');
-        }
-    }, []);
-
     return (
         <html lang="en">
             <head>
