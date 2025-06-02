@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     await transporter.sendMail(mailOptions);
     return res.status(200).json({ message: 'Message envoyé avec succès.' });
   } catch (error) {
-    console.error('Erreur SMTP :', error.response || error.message, error);
-    return res.status(500).json({ message: "Erreur lors de l'envoi", error: error.message });
-  }
+  console.error('Erreur SMTP détaillée :', error.response || error.message, error);
+  return res.status(500).json({ message: "Erreur lors de l'envoi", error: error.message });
+}
 }
