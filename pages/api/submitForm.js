@@ -8,9 +8,9 @@ export default async function handler(req, res) {
   const { first_name, last_name, company, subject, message, email } = req.body;
 
   const transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST,
-    port: parseInt(process.env.EMAIL_PORT || "587"),
-    secure: false,
+    host: process.env.EMAIL_HOST,        // smtp.ionos.fr
+    port: parseInt(process.env.EMAIL_PORT || "465"), // 465 pour SSL
+    secure: true,                         // true = SSL
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
@@ -18,7 +18,8 @@ export default async function handler(req, res) {
   });
 
   const mailOptions = {
-    from: `"${first_name} ${last_name}" <${email}>`,
+    from: `"${first_name} ${last_name}" <${process.env.EMAIL_USER}>`, // doit correspondre à un email autorisé chez IONOS
+    replyTo: email, // pour que le destinataire puisse répondre au bon expéditeur
     to: process.env.EMAIL_TO || process.env.EMAIL_USER,
     subject: subject || 'Nouveau message du site',
     html: `
@@ -35,7 +36,7 @@ export default async function handler(req, res) {
     await transporter.sendMail(mailOptions);
     return res.status(200).json({ message: 'Message envoyé avec succès.' });
   } catch (error) {
-    console.error('Erreur SMTP :', error);
+    console.error('Erreur SMTP :', error.response || error.message, error);
     return res.status(500).json({ message: "Erreur lors de l'envoi", error: error.message });
   }
 }

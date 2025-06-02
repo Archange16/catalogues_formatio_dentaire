@@ -23,9 +23,8 @@ const FormArea = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatusMessage('Envoi en cours...');
-
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/submitForm', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,6 +64,7 @@ const FormArea = () => {
       setIsSubmitting(false);
     }
   };
+  
 
   return (
     <>

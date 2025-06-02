@@ -99,7 +99,7 @@ const HeaderOne = ({variant}) => {
                     </div>
                 </div>
             </div>
-            <SideBar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
+           {/*  <SideBar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} /> */}
             <SideBarContact isOpen={sidebarOpen1} setIsOpen={setSidebarOpen1} />
             <MobileMenuPopup isOpen={menuSidebar} setIsOpen={setMenuSidebar} popupLogo={logo2} />
             <Search isOpen={search} setIsOpen={setSearch} />

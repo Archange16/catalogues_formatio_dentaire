@@ -32,11 +32,11 @@ const SideBarContact = ({ isOpen, setIsOpen }) => {
                 <div className="sidebar-close-btn" onClick={() => setIsOpen(false)}>
                         <i className="fal fa-times"></i>
                     </div>
-                    <div className="header__area-menubar-right-sidebar-popup-logo ">
-                        <Link href='/'>
-                            <img className='logo_one' src={logo2.src} alt="logo" />
-                        </Link>
-                    </div>    
+                <div className="header__area-menubar-right-sidebar-popup-logo ">
+                    <Link href='/'>
+                        <img className='logo_one' src={logo2.src} alt="logo" />
+                    </Link>
+                </div>    
                 <div className="header__area-menubar-right-sidebar-popup-contact">
                     <h4 className="">Pour toute question, contactez-nous, nous répondrons rapidement.</h4>
                     <FormArea />

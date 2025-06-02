@@ -1,4 +1,4 @@
-import Link from 'next/link';
+/* import Link from 'next/link';
 import logo2 from "../../../public/assets/img/logo-2.png";
 import Social from '@/components/data/social';
 import React, { useState, useEffect, useRef } from 'react';
@@ -143,3 +143,4 @@ const SideBar = ({ isOpen, setIsOpen }) => {
 };
 
 export default SideBar;
+ */
