@@ -120,7 +120,7 @@ const CGV = () => {
             <h2>15. Service Client</h2>
             <p>
               Pour toute question ou réclamation, le Client peut contacter le service client à l’adresse suivante :<br />
-              📧 <a className="fst-italic" href="mailto:formation@kelaj-company.com">formation@kelaj-company.com</a>
+              📧 <a href="mailto:formation@kelaj-company.com">formation@kelaj-company.com</a>
             </p>
           </div>
         </div>
