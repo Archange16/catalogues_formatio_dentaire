@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 
-const FormArea = () => {
+const FormArea = ({ onSuccess }) => {
   const [formData, setFormData] = useState({
     first_name: '',
     last_name: '',
@@ -55,6 +55,7 @@ const FormArea = () => {
           message: '',
           email: '',
         });
+        if (onSuccess) onSuccess();
       } else {
         setStatusMessage(data.message || 'Une erreur est survenue.');
       }

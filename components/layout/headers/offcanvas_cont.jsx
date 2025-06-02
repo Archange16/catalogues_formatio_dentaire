@@ -39,7 +39,7 @@ const SideBarContact = ({ isOpen, setIsOpen }) => {
                 </div>    
                 <div className="header__area-menubar-right-sidebar-popup-contact">
                     <h4 className="">Pour toute question, contactez-nous, nous répondrons rapidement.</h4>
-                    <FormArea />
+                    <FormArea onSuccess={() => setIsOpen(false)}/>
                 </div>
             </div>
             <div className={`sidebar-overlay ${isOpen ? 'show' : ''}`}></div>
