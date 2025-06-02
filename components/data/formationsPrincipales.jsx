@@ -17,7 +17,6 @@ import stress from "../../public/assets/img/v1/18 - stress.jpg";
 import comptabilite from "../../public/assets/img/v1/19 - comptabilite.png";
 import conflits from "../../public/assets/img/v1/20 - conflits.png";
 import fluides from "../../public/assets/img/v1/21 - fluides.png";
-
 import apprendreADeléguer from "../../public/assets/img/v1/APPRENDRE À DÉLÉGUER.png";
 import arabe from "../../public/assets/img/v1/arabe.png";
 import bodyLangage from "../../public/assets/img/v1/body langage.png";
