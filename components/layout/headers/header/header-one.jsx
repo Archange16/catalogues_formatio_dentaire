@@ -84,10 +84,15 @@ const HeaderOne = ({variant}) => {
                                     <button className="btn-one" onClick={() => setSidebarOpen(true)}>Contacter nous<i className="fas fa-arrow-right"></i></button>
                                 </div>
                                 <div className="header__area-menubar-right-box-btn1">
-                                    <i className=""  target="_blank"  onClick={handleContactClick}><img src={formulaire.src} alt="logo"/></i>
+                                    
+                                    <i className="text-light"  target="_blank"  onClick={handleContactClick}><img src={formulaire.src} alt="logo"/></i>
                                 </div>
-                                <div className="header__area-menubar-right-responsive-menu menu__bar">
-                                    <i className="flaticon-menu-1" onClick={() => setMenuSidebar(true)}></i>
+                                <div className="header__area-menubar-right-box">
+                                     <div className="header__area-menubar-right-box-sidebar-popup-icon" onClick={() => setMenuSidebar(true)}>
+                                        <span className="bar-1"></span>
+                                        <span className="bar-2"></span>
+                                        <span className="bar-3"></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

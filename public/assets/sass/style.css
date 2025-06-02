@@ -1192,8 +1192,8 @@ p {
   --primary-color-2: #FF6F3C  ;
   --primary-color-3: #00d1db;
   --bg-heading-color: #000d44;
-  --text-heading-color: #1f0a3b;
-  --btn-heading-color: #131313;
+  --text-heading-color: #02bcc6;
+  --btn-heading-color: #FF6F3C;
   --body-color: #343434;
   --dark-one: #1C1E22;
   --dark-two: #222429;
@@ -3615,7 +3615,8 @@ p {
   text-align: right;
   text-align: -webkit-right;
   text-align: -moz-right;
-  margin-left: 25px;
+  margin-left: 5px;
+  margin-right: 15px;
 }
 .header__area-menubar-right-box-sidebar-popup-icon:hover span {
   background-color: var(--primary-color-1);
@@ -3848,6 +3849,13 @@ p {
   right: 0;
   box-shadow: none;
   border-bottom: 1px solid rgba(5, 22, 52, 0.1607843137);
+}
+
+@media (min-width: 991px) {
+  .header__area-menubar-right-box-sidebar-popup-icon {
+    display: none;
+  }
+  
 }
 
 @media (max-width: 480px) {

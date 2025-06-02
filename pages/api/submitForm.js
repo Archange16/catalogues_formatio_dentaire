@@ -1,43 +1,44 @@
-import axios from 'axios';
+import emailjs from 'emailjs-com';
 
 export default async function handler(req, res) {
-  if (req.method === 'POST') {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  try {
     const { first_name, last_name, company, subject, message, email } = req.body;
 
-    try {
-      // Configuration de l'API Brevo pour ajouter un contact
-      const response = await axios.post(
-        'https://api.brevo.com/v3/contacts', // URL de l'API Brevo pour ajouter un contact
-        {
-          email: email, 
-          attributes: {
-            FIRSTNAME: first_name,
-            LASTNAME: last_name,
-            COMPANY_NAME: company || 'Non précisé',
-            SUBJECT: subject || 'Non précisé',
-            OBSERVATION: message || 'Non précisé',
-          },
-          listIds: [52], 
-          updateEnabled: true,
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'accept': 'application/json',
-            'api-key': process.env.SENDINBLUE_API_KEY, 
-          },
-        }
-      );
-
-      // Répondre avec un message de succès
-      res.status(200).json({ message: 'Formulaire soumis avec succès', data: response.data });
-    } catch (error) {
-      console.error('Erreur lors de l\'envoi du formulaire:', error);
-      // Répondre avec une erreur si l'API échoue
-      res.status(500).json({ message: 'Erreur lors de l\'envoi du formulaire', error: error.message });
+    // Validation des données
+    if (!email || !first_name || !last_name || !message) {
+      return res.status(400).json({ message: 'Missing required fields' });
     }
-  } else {
-    // Répondre avec un code 405 si la méthode n'est pas POST
-    res.status(405).json({ message: 'Méthode non autorisée' });
+
+    const templateParams = {
+      first_name,
+      last_name,
+      company: company || 'Non spécifiée',
+      subject: subject || 'Pas de sujet',
+      message,
+      email,
+    };
+
+    const response = await emailjs.send(
+      process.env.EMAILJS_SERVICE_ID,
+      process.env.EMAILJS_TEMPLATE_ID,
+      templateParams,
+      process.env.EMAILJS_USER_ID
+    );
+
+    if (response.status === 200) {
+      return res.status(200).json({ message: 'Message envoyé avec succès' });
+    } else {
+      return res.status(500).json({ message: 'Erreur lors de l\'envoi du message' });
+    }
+  } catch (error) {
+    console.error('Error sending email:', error);
+    return res.status(500).json({ 
+      message: 'Erreur serveur', 
+      error: error.message || error.toString() 
+    });
   }
 }

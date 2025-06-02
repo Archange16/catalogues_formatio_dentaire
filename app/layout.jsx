@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { useEffect } from 'react';
 import "./globals.css";
 import { Suspense } from "react";
@@ -6,6 +6,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { ToastContainer } from 'react-toastify';
 
 export default function RootLayout({ children }) {
+    
     useEffect(() => {
         // Charger Bootstrap en mode client
         if (typeof window !== 'undefined') {
@@ -14,7 +15,7 @@ export default function RootLayout({ children }) {
     }, []);
 
     return (
-        <html lang="en">
+        <html lang="fr">
             <head>
                 <script
                     src="https://checkout.revolut.com/checkout.js" // Assurez-vous que ce lien est correct
