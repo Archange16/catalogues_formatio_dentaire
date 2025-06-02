@@ -11,9 +11,9 @@ import CategoriesMain from "./categories";
 const CategoriesPage = () => {
     return (
         <>
-            <SEO pageTitle="Nos catégories de programmes de formation" />
+            <SEO pageTitle="Kelaj Formation" />
             <HeaderOne />
-            <BreadCrumb title="Notre Catalogue" innerTitle="Nos catégories de programmes de formation" />
+            <BreadCrumb title="Kelaj Formation" innerTitle="Kelaj Formation" />
             <CategoriesMain />
             <WorkArea />
             <Testimonial />
