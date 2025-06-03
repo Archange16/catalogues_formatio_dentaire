@@ -51,11 +51,16 @@ console.log('BREVO_API_KEY:', process.env.SENDINBLUE_API_KEY);
         htmlContent: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <p>Bonjour ${first_name},</p>
-            <p>Nous accusons réception de votre message et vous remercions de l'intérêt que vous portez à Kelaj Formation.</p>
-            <p>Nous traitons votre demande et vous contacterons dans les plus brefs délais.</p>
-            <p>À très vite,</p>
-            <p><strong>L'équipe Kelaj Formation</strong></p>
-          </div>
+            <p>Merci d’avoir contacté <strong>Kelaj Formation</strong> ! 😊<br>
+              Nous sommes ravis de l’intérêt que vous portez à nos programmes de formation.</p>
+
+              <p>Votre message a bien été reçu. Notre équipe reviendra vers vous avec une réponse personnalisée dans un délai de 48 heures ouvrées, directement dans votre boîte mail. 📩</p>
+
+              <p>En attendant, n’hésitez pas à consulter notre site ou à nous suivre sur nos réseaux sociaux pour rester informé(e) de nos actualités et nouveautés.</p>
+
+              <p>À très bientôt,</p>
+
+              <p><strong>L’équipe Kelaj Formation</strong> ✨</p>
         `
       },
       { headers: brevoHeaders }
